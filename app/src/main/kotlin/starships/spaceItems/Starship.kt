@@ -16,8 +16,12 @@ class Starship(position: Vector2, direction: Vector2,
                speed: Double, view: ImageView,
                var lives: Int, val height: Double, val width: Double,val gunSpeed: Double, val id:Int): MovableItem(position, direction, speed, view) {
     var hasFired = false
-    val starShipDamageCollider = StarShipCollider(height, width, Math.toDegrees(direction.angle) - 90, this)
+    val starShipDamageCollider = StarShipCollider(height-25.0, width-25.0, Math.toDegrees(direction.angle) - 90, this)
     private val defaultGun = LaserGun(10.0, 500)
+    init{
+        starShipDamageCollider.shape.layoutX = position.x + 25.0
+        starShipDamageCollider.shape.layoutY = position.y + 25.0
+    }
 
     var specialGun:Gun = FastGun(10.0)
     var specialGunCoolDown = 0.seconds

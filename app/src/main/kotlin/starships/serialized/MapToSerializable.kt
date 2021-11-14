@@ -18,7 +18,7 @@ class MapToSerializable {
             val direction = toSerializedVector(it.starship.direction)
             val serializedStarShip = SerializedStarShip(position, direction, it.starship.speed,
                 it.starship.lives, it.starship.height, it.starship.width, it.starship.gunSpeed, it.starship.id)
-            SerializedPlayer(it.shipMover, serializedStarShip)
+            SerializedPlayer(it.name, it.shipMover, serializedStarShip)
         }
         val serializedAsteroidSpawns = gameData.asteroidSpawns.map{
             val position = toSerializedVector(it.position)
@@ -55,7 +55,7 @@ class MapToSerializable {
                 imageToView("starship.png",60.0,60.0),serialStarship.lives,
                 serialStarship.height, serialStarship.width, serialStarship.gunSpeed, serialStarship.id)
             starships.add(starship)
-            Player(it.shipMover, starship)
+            Player(it.name, it.shipMover, starship)
         }
         val asteroidSpawns = gameData.asteroidSpawns.map {
             AsteroidSpawn(it.height, it.width, toNormalVector(it.position), it.minAngle, it.maxAngle, it.maxSize, it.speed)
