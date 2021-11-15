@@ -1,0 +1,62 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"70a902be-0464-4ebf-8c75-e5948e34da26\" name=\"Changes\" comment=\"\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"CodeStyleSettingsInfer\">\n    <option name=\"done\" value=\"true\" />\n  </component>\n  <component name=\"ExternalProjectsData\">\n    <projectState path=\"$PROJECT_DIR$\">\n      <ProjectState />\n    </projectState>\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n        <option value=\"Kotlin Interface\" />\n        <option value=\"Kotlin Data Class\" />\n        <option value=\"Kotlin Class\" />\n        <option value=\"Kotlin File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"GitSEFilterConfiguration\">\n    <file-type-list>\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\n      <filtered-out-file-type name=\"TAG\" />\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\n    </file-type-list>\n  </component>\n  <component name=\"HighlightingSettingsPerFile\">\n    <setting file=\"jar:///Library/Java/JavaVirtualMachines/jdk-16.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Math.java\" root0=\"FORCE_HIGHLIGHTING\" />\n    <setting file=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.austral.dissis.starships/lib/1.1.0/551658b12b9f68fb28a8e0d4d0ccd4a430ca1754/lib-1.1.0.jar!/edu/austral/dissis/starships/vector/Vector2.class\" root0=\"FORCE_HIGHLIGHTING\" />\n  </component>\n  <component name=\"MacroExpansionManager\">\n    <option name=\"directoryName\" value=\"hhxx5sod\" />\n  </component>\n  <component name=\"ProjectCodeStyleSettingsMigration\">\n    <option name=\"version\" value=\"2\" />\n  </component>\n  <component name=\"ProjectId\" id=\"20NTCgD79OxWRj1fZFYJ0gSdXCF\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n    <property name=\"project.structure.last.edited\" value=\"Modules\" />\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\n    <property name=\"project.structure.side.proportion\" value=\"0.0\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"project.kotlinCompiler\" />\n  </component>\n  <component name=\"ReaderModeSettings\">\n    <option name=\"enabled\" value=\"false\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/app/src/main/resources\" />\n    </key>\n    <key name=\"CreateKotlinClassDialog.RecentsKey\">\n      <recent name=\"starships\" />\n    </key>\n    <key name=\"MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY\">\n      <recent name=\"starships.serialized\" />\n      <recent name=\"starships.data\" />\n      <recent name=\"starships.factorys\" />\n      <recent name=\"starships.SpaceItems\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Kotlin.AppKt\">\n    <configuration name=\"starships [dependencies]\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\n      <ExternalSystemSettings>\n        <option name=\"executionName\" />\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\n        <option name=\"scriptParameters\" />\n        <option name=\"taskDescriptions\">\n          <list />\n        </option>\n        <option name=\"taskNames\">\n          <list>\n            <option value=\"dependencies\" />\n          </list>\n        </option>\n        <option name=\"vmOptions\" />\n      </ExternalSystemSettings>\n      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\n      <DebugAllEnabled>false</DebugAllEnabled>\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"AppKt\" type=\"JetRunConfigurationType\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"starships.AppKt\" />\n      <module name=\"starships.app.main\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Kotlin.AppKt\" />\n        <item itemvalue=\"Gradle.starships [dependencies]\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"70a902be-0464-4ebf-8c75-e5948e34da26\" name=\"Changes\" comment=\"\" />\n      <created>1635883923467</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1635883923467</updated>\n      <workItem from=\"1635883925640\" duration=\"1998000\" />\n      <workItem from=\"1636207845533\" duration=\"20948000\" />\n      <workItem from=\"1636378069796\" duration=\"12554000\" />\n      <workItem from=\"1636479727150\" duration=\"10542000\" />\n      <workItem from=\"1636569371508\" duration=\"10384000\" />\n      <workItem from=\"1636634281462\" duration=\"21174000\" />\n      <workItem from=\"1636758083993\" duration=\"12593000\" />\n      <workItem from=\"1636841985187\" duration=\"793000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>jar:///Library/Java/JavaVirtualMachines/jdk-16.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Math.java</url>\n          <line>168</line>\n          <option name=\"timeStamp\" value=\"8\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" type=\"kotlin-line\">\n          <url>file://$PROJECT_DIR$/app/src/main/kotlin/starships/Game.kt</url>\n          <line>128</line>\n          <option name=\"timeStamp\" value=\"29\" />\n        </line-breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision ec43f3fa9b7c62924fc2d446f3cc9778957e8c5a)
++++ b/.idea/workspace.xml	(date 1636989750999)
+@@ -29,6 +29,9 @@
+       </list>
+     </option>
+   </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
+   <component name="GitSEFilterConfiguration">
+     <file-type-list>
+       <filtered-out-file-type name="LOCAL_BRANCH" />
+@@ -48,6 +51,7 @@
+     <option name="version" value="2" />
+   </component>
+   <component name="ProjectId" id="20NTCgD79OxWRj1fZFYJ0gSdXCF" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+@@ -60,7 +64,7 @@
+     <property name="nodejs_package_manager_path" value="npm" />
+     <property name="project.structure.last.edited" value="Modules" />
+     <property name="project.structure.proportion" value="0.0" />
+-    <property name="project.structure.side.proportion" value="0.0" />
++    <property name="project.structure.side.proportion" value="0.2" />
+     <property name="settings.editor.selected.configurable" value="project.kotlinCompiler" />
+   </component>
+   <component name="ReaderModeSettings">
+@@ -131,12 +135,23 @@
+       <workItem from="1636569371508" duration="10384000" />
+       <workItem from="1636634281462" duration="21174000" />
+       <workItem from="1636758083993" duration="12593000" />
+-      <workItem from="1636841985187" duration="793000" />
++      <workItem from="1636841985187" duration="1625000" />
+     </task>
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
