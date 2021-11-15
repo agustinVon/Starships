@@ -1,33 +1,24 @@
 package starships
 
-import com.sun.tools.javac.Main
 import edu.austral.dissis.starships.file.FileLoader
 import edu.austral.dissis.starships.game.*
-import edu.austral.dissis.starships.vector.Vector2
 import javafx.event.EventHandler
 import javafx.geometry.Insets
 import javafx.scene.Parent
-import javafx.scene.Scene
 import javafx.scene.control.Button
 import javafx.scene.input.KeyCode
 import javafx.scene.input.KeyEvent
 import javafx.scene.layout.Pane
 import javafx.scene.layout.VBox
 import javafx.scene.text.Text
-import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.JsonElement
-import kotlinx.serialization.json.encodeToJsonElement
 import kotlinx.serialization.modules.SerializersModule
 import starships.data.GameData
-import starships.factorys.*
 import starships.serialized.MapToSerializable
 import starships.spaceItems.SerializedGameData
 import starships.spaceItems.Starship
 import java.io.File
-import java.io.IOException
-import java.nio.file.FileStore
 
 class Game: GameApplication() {
     override fun setupWindow(): WindowSettings {
@@ -62,17 +53,24 @@ class GameManager(private val rootSetter: RootSetter, private val context: GameC
         vbox.children.add(title);
 
         val options = ArrayList<Button>()
-        val newGameButton = Button("New game")
+        val newGameButton = Button("New single player game")
         newGameButton.onAction = EventHandler { _ ->
-            newGame()
+            newSingleGame()
         }
         options.add(newGameButton)
+
+        val newMultiGameButton = Button("New multiplayer game")
+        newMultiGameButton.onAction = EventHandler { _ ->
+            newMultiGame()
+        }
+        options.add(newMultiGameButton)
 
         val loadGameButton = Button("LoadGame")
         loadGameButton.onAction = EventHandler { _ ->
             loadGame()
         }
         options.add(loadGameButton)
+
 
         options.map{
             VBox.setMargin(it, Insets(0.0, 0.0, 0.0, 8.0))
@@ -92,26 +90,23 @@ class GameManager(private val rootSetter: RootSetter, private val context: GameC
         rootSetter.setRoot(init())
     }
 
-    private fun newGame(){
-        val starShipFactory = StarShipFactory(90.0, "starship.png")
-        val starship1 = starShipFactory.createStarShip(Vector2.vector(200.0,200.0))
-        val starships = ArrayList<Starship>()
-        starships.add(starship1)
-
-        val spawn1 = AsteroidSpawn(20.0, 560.0, Vector2.vector(40.0, 0.0),
-            Math.toRadians(20.0), Math.toRadians(160.0), 120.0, 2.0)
-        val spawns = ArrayList<AsteroidSpawn>()
-        spawns.add(spawn1)
-
-        val pickUpSpawn = PickUpSpawn(480.0,600.0, Vector2.vector(0.0,0.0))
-
-        val player1 = Player(StarshipMover(KeyCode.UP, KeyCode.DOWN, KeyCode.LEFT, KeyCode.RIGHT, KeyCode.SPACE), starship1)
-        val players = ArrayList<Player>()
-        players.add(player1)
-
-        gameData = GameData(players, spawns, pickUpSpawn, ArrayList(), ArrayList(), ArrayList())
+    private fun newSingleGame(){
+        val fileName = "game.json"
+        val file = File(fileName)
+        val data = file.readText()
+        val serializedGameData = Json.decodeFromString(SerializedGameData.serializer(), data)
+        gameData = mapper.serializedGameDataToGameData(serializedGameData)
         gameState = "START"
+        rootSetter.setRoot(init())
+    }
 
+    private fun newMultiGame(){
+        val fileName = "game2.json"
+        val file = File(fileName)
+        val data = file.readText()
+        val serializedGameData = Json.decodeFromString(SerializedGameData.serializer(), data)
+        gameData = mapper.serializedGameDataToGameData(serializedGameData)
+        gameState = "START"
         rootSetter.setRoot(init())
     }
 
@@ -172,6 +167,9 @@ class GameManager(private val rootSetter: RootSetter, private val context: GameC
                 timer.stop()
                 this.gameData = getGameData(space, gameData.players as ArrayList<Player>)
                 gameState = "PAUSE"
+                rootSetter.setRoot(init())
+            } else if(event.code == KeyCode.R){
+                gameState= "MENU"
                 rootSetter.setRoot(init())
             }
         }

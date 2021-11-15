@@ -1,0 +1,59 @@
+{
+  "players": [
+    {
+      "name": "Player 1",
+      "shipMover": {
+        "up": "UP",
+        "down": "DOWN",
+        "rotL": "LEFT",
+        "rotR": "RIGHT",
+        "shoot": "SPACE"
+      },
+      "starship": {
+        "position": {
+          "x": 200.0,
+          "y": 200.0,
+          "rot": 0.7853981633974483
+        },
+        "direction": {
+          "x": 0.0,
+          "y": 1.0,
+          "rot": 1.5707963267948966
+        },
+        "speed": 90.0,
+        "lives": 3,
+        "height": 60.0,
+        "width": 60.0,
+        "gunSpeed": 6.0,
+        "id": 1
+      }
+    }
+  ],
+  "asteroidSpawns": [
+    {
+      "height": 20.0,
+      "width": 560.0,
+      "position": {
+        "x": 40.0,
+        "y": 0.0,
+        "rot": 0.0
+      },
+      "minAngle": 0.3490658503988659,
+      "maxAngle": 2.792526803190927,
+      "maxSize": 120.0,
+      "speed": 2.0
+    }
+  ],
+  "pickUpSpawn": {
+    "height": 480.0,
+    "width": 600.0,
+    "position": {
+      "x": 0.0,
+      "y": 0.0,
+      "rot": 0.0
+    }
+  },
+  "asteroids": [],
+  "laser": [],
+  "pickups": []
+}

@@ -15,7 +15,7 @@ import starships.factorys.PickUpSpawn
 data class SerializedVector(val x:Double, val y:Double, val rot:Double)
 
 @Serializable
-data class SerializedPlayer(val shipMover: StarshipMover, val starship: SerializedStarShip)
+data class SerializedPlayer(val name:String, val shipMover: StarshipMover, val starship: SerializedStarShip)
 
 @Serializable
 data class SerializedStarShip(val position: SerializedVector, val direction: SerializedVector, val speed: Double,

@@ -22,7 +22,7 @@ repositories {
         url = uri("https://maven.pkg.github.com/austral-ingsis/starships-fx")
         credentials {
             username = "agustinVon"
-            password = "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"
+            password = "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"
         }
     }
 }

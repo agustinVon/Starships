@@ -4,6 +4,7 @@ import edu.austral.dissis.starships.collision.CollisionEngine
 import javafx.scene.image.ImageView
 import javafx.scene.layout.Pane
 import javafx.scene.layout.StackPane
+import javafx.scene.layout.VBox
 import javafx.scene.text.Text
 import starships.colliders.SpaceCollider
 import starships.data.SpaceData
@@ -14,6 +15,7 @@ import starships.spaceItems.Asteroid
 import starships.spaceItems.Laser
 import starships.spaceItems.PickUp
 import starships.spaceItems.Starship
+import java.awt.Button
 
 class Space(val starships: ArrayList<Starship>, private val asteroidSpawns: List<AsteroidSpawn>, private val pickUpSpawn: PickUpSpawn,
             private val lasers: ArrayList<Laser>, private val pickUps: ArrayList<PickUp>,
@@ -115,13 +117,19 @@ class Space(val starships: ArrayList<Starship>, private val asteroidSpawns: List
         starships.map{
             views.add(it.view)
         }
+        pickUps.map{
+            views.add(it.imageView)
+        }
+        lasers.map{
+            views.add(it.view)
+        }
         pickUps.map {
             if(it.destroyed){
                 views.add(it.imageView)
             }
         }
         pane.children.removeAll(views)
-        pane.children.add(StackPane(Text("Game is over")))
+        pane.children.add(VBox(Text("Game is over")))
     }
 
     fun checkFire() {
