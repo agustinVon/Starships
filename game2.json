@@ -25,7 +25,8 @@
                 "height": 60.0,
                 "width": 60.0,
                 "gunSpeed": 6.0,
-                "id": 1
+                "id": 1,
+                "score":  0
             }
         },
         {
@@ -53,7 +54,8 @@
                 "height": 60.0,
                 "width": 60.0,
                 "gunSpeed": 6.0,
-                "id": 2
+                "id": 2,
+                "score":  0
             }
         }
     ],

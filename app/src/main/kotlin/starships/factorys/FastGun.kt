@@ -12,7 +12,7 @@ import starships.spaceItems.Laser
 import starships.spaceItems.Starship
 
 @Serializable
-class FastGun(val speed: Double): Gun {
+class FastGun(val speed: Double): Gun() {
     private val laserGun = LaserGun(speed, 100)
     override fun shoot(starship: Starship): List<Laser> {
         return laserGun.shoot(starship)

@@ -19,7 +19,7 @@ data class SerializedPlayer(val name:String, val shipMover: StarshipMover, val s
 
 @Serializable
 data class SerializedStarShip(val position: SerializedVector, val direction: SerializedVector, val speed: Double,
-                    var lives: Int, val height: Double, val width: Double,val gunSpeed: Double, val id: Int)
+                    var lives: Int, val height: Double, val width: Double,val gunSpeed: Double, val id: Int, val score: Int)
 
 @Serializable
 data class SerializedAsteroid(val position: SerializedVector, val direction: SerializedVector, val height: Double, val width: Double, val speed: Double)

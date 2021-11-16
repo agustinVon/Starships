@@ -1,18 +1,20 @@
 package starships
 
-import edu.austral.dissis.starships.file.FileLoader
+import edu.austral.dissis.starships.file.ImageLoader
 import edu.austral.dissis.starships.game.*
 import javafx.event.EventHandler
 import javafx.geometry.Insets
 import javafx.scene.Parent
 import javafx.scene.control.Button
+import javafx.scene.image.Image
+import javafx.scene.image.ImageView
 import javafx.scene.input.KeyCode
 import javafx.scene.input.KeyEvent
-import javafx.scene.layout.Pane
-import javafx.scene.layout.VBox
+import javafx.scene.layout.*
 import javafx.scene.text.Text
-import kotlinx.serialization.json.Json
+import javafx.stage.Screen
 import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 import kotlinx.serialization.modules.SerializersModule
 import starships.data.GameData
 import starships.serialized.MapToSerializable
@@ -33,7 +35,6 @@ class Game: GameApplication() {
 class GameManager(private val rootSetter: RootSetter, private val context: GameContext) {
     private var gameState = "MENU"
     private var gameData:GameData? = null
-    private val fileManager = FileLoader()
     private val mapper = MapToSerializable()
 
     fun init(): Parent {
@@ -123,9 +124,7 @@ class GameManager(private val rootSetter: RootSetter, private val context: GameC
             val serializedData = mapper.gameDataToSerializable(gameData)
             val file = File("starship_save.txt")
 
-            val module = SerializersModule {
-
-            }
+            val module = SerializersModule {}
             file.writeText(Json.encodeToString(serializedData))
         }
         options.add(saveGameButton)
@@ -147,7 +146,10 @@ class GameManager(private val rootSetter: RootSetter, private val context: GameC
     }
 
     private fun startGame(gameData: GameData): Parent {
+        val loader = ImageLoader()
         val pane = Pane()
+        val image = loader.loadFromResources("background.jpg", Screen.getPrimary().visualBounds.width, Screen.getPrimary().visualBounds.height)
+        pane.background = Background(BackgroundImage(image,BackgroundRepeat.REPEAT ,BackgroundRepeat.REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT))
         pane.isFocusTraversable = true
         pane.requestFocus()
         pane.onMouseClicked
@@ -159,7 +161,7 @@ class GameManager(private val rootSetter: RootSetter, private val context: GameC
 
         val space = Space(starships, gameData.asteroidSpawns, gameData.pickUpSpawn, gameData.laser, gameData.pickups, gameData.asteroids, pane)
 
-        val timer = MainTimer(space, gameData.players, KeyCode.ESCAPE, context.keyTracker)
+        val timer = MainTimer(space, gameData.players, context.keyTracker)
         timer.start()
 
         pane.onKeyPressed = EventHandler<KeyEvent> { event ->
@@ -182,20 +184,19 @@ class GameManager(private val rootSetter: RootSetter, private val context: GameC
     }
 }
 
-class MainTimer(private val space: Space, private val players: List<Player>, private val pauseKey: KeyCode,
+class MainTimer(private val space: Space, private val players: List<Player>,
                 private val keyTracker: KeyTracker) : GameTimer() {
 
-    private val spawnHandler = SpawnHandler(space, 50, 200)
-    private val pauseHandler = PauseHandler()
+    private val spawnHandler = SpawnHandler(space, 40, 200)
     private var currentFrame = 0
     private var gameHasEnded = false
-    private var gameIsPaused = false
 
     override fun nextFrame(secondsSinceLastFrame: Double) {
         space.pane.requestFocus()
         if(!gameHasEnded){
             spawnHandler.passFrame(currentFrame)
             updatePosition(secondsSinceLastFrame)
+            updateScoreboard()
             space.checkFire();
             space.moveAsteroids();
             space.moveLasers();
@@ -226,5 +227,16 @@ class MainTimer(private val space: Space, private val players: List<Player>, pri
 
     private fun updatePosition(secondsSinceLastFrame: Double) {
         players.map { it.handleKeyPress(keyTracker.keySet,secondsSinceLastFrame) }
+    }
+
+    private fun updateScoreboard(){
+        val playerScore = HashMap<String, Int>()
+        val playerLives = HashMap<String, Int>()
+        players.map {
+            it.updateScore()
+            playerScore[it.name] = it.score
+            playerLives.put(it.name, it.getLives())
+        }
+        space.updateScoreBoard(playerScore, playerLives)
     }
 }

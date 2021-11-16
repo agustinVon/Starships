@@ -5,27 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa19b9a2-8d08-4602-b81c-ab647e283920" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries-with-intellij-classes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/ScoreBoard.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/starship_save.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/resources/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/starship_save.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/Game.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/Movable.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/PauseHandler.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/Player.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/Player.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/ScoreBoard.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/ScoreBoard.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/Space.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/Space.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/CommonLaserGun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/CommonLaserGun.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/FastGun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/FastGun.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/Gun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/Gun.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/TripleGun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/TripleGun.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/serialized/MapToSerializable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/serialized/MapToSerializable.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/serialized/SerializedItems.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/serialized/SerializedItems.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/spaceItems/Starship.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/spaceItems/Starship.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starship_save.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.json" beforeDir="false" afterPath="$PROJECT_DIR$/game.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game2.json" beforeDir="false" afterPath="$PROJECT_DIR$/game2.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +33,16 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -47,8 +53,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar:///Library/Java/JavaVirtualMachines/jdk-16.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Math.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.austral.dissis.starships/lib/1.1.0/551658b12b9f68fb28a8e0d4d0ccd4a430ca1754/lib-1.1.0.jar!/edu/austral/dissis/starships/vector/Vector2.class" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="2hur9ujg" />
+  </component>
   <component name="ProjectId" id="20tFwKaYqfLRDkvWJl69v6bbd7y" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -67,11 +80,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/resources" />
       <recent name="C:\Users\Pc\projects\diseno\Starships" />
       <recent name="C:\Users\Pc\projects\diseno\Starships\app" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppKt">
+  <component name="RunManager" selected="Kotlin.AppKt">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -105,21 +119,15 @@
       <method v="2" />
     </configuration>
     <configuration name="AppKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="starships.app.main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="starships.AppKt" />
-      <option name="WORKING_DIRECTORY" />
+      <module name="starships.app.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AppKt" />
+        <item itemvalue="Kotlin.AppKt" />
         <item itemvalue="Gradle.Starships [dependencies]" />
       </list>
     </recent_temporary>
@@ -149,30 +157,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/kotlin/starships/colliders/StarShipCollider.kt</url>
-          <line>20</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/kotlin/starships/Game.kt</url>
-          <line>99</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/kotlin/starships/Game.kt</url>
-          <line>57</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="starships.spaceItems.Starship" memberName="specialGun" />

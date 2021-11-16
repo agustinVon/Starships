@@ -1,10 +1,12 @@
 package starships
 
 import edu.austral.dissis.starships.collision.CollisionEngine
+import javafx.geometry.Pos
 import javafx.scene.image.ImageView
 import javafx.scene.layout.Pane
 import javafx.scene.layout.StackPane
 import javafx.scene.layout.VBox
+import javafx.scene.paint.Color
 import javafx.scene.text.Text
 import starships.colliders.SpaceCollider
 import starships.data.SpaceData
@@ -16,12 +18,15 @@ import starships.spaceItems.Laser
 import starships.spaceItems.PickUp
 import starships.spaceItems.Starship
 import java.awt.Button
+import javax.swing.GroupLayout
 
 class Space(val starships: ArrayList<Starship>, private val asteroidSpawns: List<AsteroidSpawn>, private val pickUpSpawn: PickUpSpawn,
             private val lasers: ArrayList<Laser>, private val pickUps: ArrayList<PickUp>,
             private val asteroids: ArrayList<Asteroid>, val pane: Pane) {
     private val collisionEngine = CollisionEngine()
+    private val scoreBoard = ScoreBoard()
     init {
+        pane.children.add(scoreBoard.vBox)
         starships.map {
             pane.children.add(it.view)
         }
@@ -103,33 +108,21 @@ class Space(val starships: ArrayList<Starship>, private val asteroidSpawns: List
             it.collider
         }
         colliders.addAll(asteroidColliders)
+        colliders.addAll(laserColliders)
         colliders.addAll(starshipColliders)
         colliders.addAll(pickupCollider)
-        colliders.addAll(laserColliders)
         collisionEngine.checkCollisions(colliders)
     }
 
     fun showEndScreen() {
-        val views = ArrayList<ImageView>()
-        asteroids.map{
-            views.add(it.view)
-        }
-        starships.map{
-            views.add(it.view)
-        }
-        pickUps.map{
-            views.add(it.imageView)
-        }
-        lasers.map{
-            views.add(it.view)
-        }
-        pickUps.map {
-            if(it.destroyed){
-                views.add(it.imageView)
-            }
-        }
-        pane.children.removeAll(views)
-        pane.children.add(VBox(Text("Game is over")))
+        pane.children.removeAll(pane.children)
+        val text = Text("Game is over")
+        text.fill = Color.WHITE
+        val vBox = VBox(text)
+        val winner = Text(scoreBoard.getWinnerPlayerAndScore())
+        winner.fill = Color.WHITE
+        vBox.children.add(winner)
+        pane.children.add(vBox)
     }
 
     fun checkFire() {
@@ -158,5 +151,9 @@ class Space(val starships: ArrayList<Starship>, private val asteroidSpawns: List
 
     fun getSpaceData(): SpaceData {
         return SpaceData(asteroidSpawns, pickUpSpawn, asteroids, lasers, pickUps)
+    }
+
+    fun updateScoreBoard(playerScores:Map<String,Int>, playerLives:Map<String, Int>){
+        scoreBoard.updateScoreboard(playerScores, playerLives)
     }
 }

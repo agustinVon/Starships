@@ -8,13 +8,15 @@ import javafx.scene.image.ImageView
 import kotlinx.serialization.Contextual
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.Transient
 import starships.spaceItems.Laser
 import starships.spaceItems.Starship
 
 @Serializable
 @SerialName("TripleGun")
-class TripleGun(private val speed: Double):Gun {
+class TripleGun(private val speed: Double): Gun() {
     @Contextual
+    @Transient
     var lastShotTime = DateTime.now();
     override fun shoot(starship: Starship): List<Laser> {
         val currentShot = DateTime.now()

@@ -14,7 +14,11 @@ class Player(val name:String, val shipMover: StarshipMover, val starship: Starsh
         hasLost = true
     }
 
-    fun addScore(score: Int) {
-        this.score += score
+    fun updateScore() {
+        starship.updateScore(this)
+    }
+
+    fun getLives():Int{
+        return starship.lives
     }
 }

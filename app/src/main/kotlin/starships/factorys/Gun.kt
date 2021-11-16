@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 import starships.spaceItems.Laser
 import starships.spaceItems.Starship
 
-@Polymorphic
-interface Gun {
-    fun shoot(starship: Starship): List<Laser>
+@Serializable
+sealed class Gun{
+    abstract fun shoot(starship: Starship): List<Laser>
 }
