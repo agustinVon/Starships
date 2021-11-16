@@ -8,6 +8,7 @@ import javafx.scene.layout.StackPane
 import javafx.scene.layout.VBox
 import javafx.scene.paint.Color
 import javafx.scene.text.Text
+import javafx.scene.text.TextAlignment
 import starships.colliders.SpaceCollider
 import starships.data.SpaceData
 import starships.factorys.AsteroidSpawn
@@ -117,9 +118,11 @@ class Space(val starships: ArrayList<Starship>, private val asteroidSpawns: List
     fun showEndScreen() {
         pane.children.removeAll(pane.children)
         val text = Text("Game is over")
+        text.textAlignment = TextAlignment.CENTER
         text.fill = Color.WHITE
         val vBox = VBox(text)
         val winner = Text(scoreBoard.getWinnerPlayerAndScore())
+        winner.textAlignment = TextAlignment.CENTER
         winner.fill = Color.WHITE
         vBox.children.add(winner)
         pane.children.add(vBox)

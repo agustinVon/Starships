@@ -4,24 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa19b9a2-8d08-4602-b81c-ab647e283920" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/starship_save.txt" afterDir="false" />
+    <list default="true" id="fa19b9a2-8d08-4602-b81c-ab647e283920" name="Default Changelist" comment="Final touches">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/Game.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/Movable.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/PauseHandler.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/Player.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/Player.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/ScoreBoard.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/ScoreBoard.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/Printable.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/Space.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/Space.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/CommonLaserGun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/CommonLaserGun.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/FastGun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/FastGun.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/Gun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/Gun.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/TripleGun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/TripleGun.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/serialized/MapToSerializable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/serialized/MapToSerializable.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/serialized/SerializedItems.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/serialized/SerializedItems.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/StarShipFactory.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/game.json" beforeDir="false" afterPath="$PROJECT_DIR$/game.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game2.json" beforeDir="false" afterPath="$PROJECT_DIR$/game2.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +132,14 @@
       <updated>1636856216442</updated>
       <workItem from="1636856219337" duration="4663000" />
     </task>
+    <task id="LOCAL-00001" summary="Final touches">
+      <created>1637071145362</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1637071145362</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +159,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Final touches" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final touches" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

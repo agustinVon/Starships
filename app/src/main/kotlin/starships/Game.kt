@@ -6,8 +6,6 @@ import javafx.event.EventHandler
 import javafx.geometry.Insets
 import javafx.scene.Parent
 import javafx.scene.control.Button
-import javafx.scene.image.Image
-import javafx.scene.image.ImageView
 import javafx.scene.input.KeyCode
 import javafx.scene.input.KeyEvent
 import javafx.scene.layout.*
@@ -210,7 +208,6 @@ class MainTimer(private val space: Space, private val players: List<Player>,
         }
     }
 
-    //TODO separate side effects
     private fun checkIfPlayersAlive(){
         var onePlayerAlive = false
         players.map {
