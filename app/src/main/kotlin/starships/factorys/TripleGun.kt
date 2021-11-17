@@ -33,9 +33,9 @@ class TripleGun(private val speed: Double): Gun() {
             val laserPosition3 = starshipCenter.subtract(directionRight.multiply(40.0))
 
             lastShotTime = currentShot
-            val laser = Laser(laserPosition1, starship.direction.multiply(-1.0), speed, ImageView(laserImage), 10.0, 5.0, starship::addScore, starship.id)
-            val laser2  = Laser(laserPosition2, directionleft.multiply(-1.0), speed, ImageView(laserImage), 10.0, 5.0, starship::addScore, starship.id)
-            val laser3  = Laser(laserPosition3, directionRight.multiply(-1.0), speed, ImageView(laserImage), 10.0, 5.0, starship::addScore, starship.id)
+            val laser = Laser(laserPosition1, starship.direction.multiply(-1.0), speed, laserImage, 10.0, 5.0, starship::addScore, starship.id)
+            val laser2  = Laser(laserPosition2, directionleft.multiply(-1.0), speed, laserImage, 10.0, 5.0, starship::addScore, starship.id)
+            val laser3  = Laser(laserPosition3, directionRight.multiply(-1.0), speed, laserImage, 10.0, 5.0, starship::addScore, starship.id)
 
             val list = ArrayList<Laser>()
             list.add(laser)

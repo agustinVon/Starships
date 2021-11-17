@@ -18,6 +18,6 @@ class AsteroidSpawn(val height: Double, val width: Double, val position: Vector2
         val direction = Vector2.vector(1.0, 0.0).rotate(angle)
         val asteroidPosition = Vector2.vector(x, y)
         val asteroidImage = imageLoader.loadFromResources("meteorito.png", size, size)
-        return Asteroid(asteroidPosition, direction, speed, ImageView(asteroidImage), size, size)
+        return Asteroid(asteroidPosition, direction, asteroidImage, speed, size, size)
     }
 }

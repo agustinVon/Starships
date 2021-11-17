@@ -4,19 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa19b9a2-8d08-4602-b81c-ab647e283920" name="Default Changelist" comment="Final touches">
+    <list default="true" id="fa19b9a2-8d08-4602-b81c-ab647e283920" name="Default Changelist" comment="Final fixes">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/viewManagers/AsteroidViewManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/viewManagers/LaserViewManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/viewManagers/PickUpViewManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/viewManagers/StarShipViewManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/Game.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/Printable.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/Space.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/Space.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/AsteroidSpawn.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/AsteroidSpawn.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/CommonLaserGun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/CommonLaserGun.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/FastGun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/FastGun.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/Gun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/Gun.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/StarShipFactory.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.json" beforeDir="false" afterPath="$PROJECT_DIR$/game.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/PickUpSpawn.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/PickUpSpawn.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/TripleGun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/factorys/TripleGun.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/serialized/MapToSerializable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/serialized/MapToSerializable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/spaceItems/Asteroid.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/spaceItems/Asteroid.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/spaceItems/Laser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/spaceItems/Laser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/spaceItems/MovableItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/spaceItems/MovableItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/spaceItems/PickUp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/spaceItems/PickUp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/starships/spaceItems/Starship.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/starships/spaceItems/Starship.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game2.json" beforeDir="false" afterPath="$PROJECT_DIR$/game2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starship_save.txt" beforeDir="false" afterPath="$PROJECT_DIR$/starship_save.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -50,6 +70,9 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="2hur9ujg" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
   <component name="ProjectId" id="20tFwKaYqfLRDkvWJl69v6bbd7y" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -62,6 +85,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -131,6 +155,7 @@
       <option name="presentableId" value="Default" />
       <updated>1636856216442</updated>
       <workItem from="1636856219337" duration="4663000" />
+      <workItem from="1637082808621" duration="11007000" />
     </task>
     <task id="LOCAL-00001" summary="Final touches">
       <created>1637071145362</created>
@@ -139,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637071145362</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Final fixes">
+      <created>1637072257210</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637072257210</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +192,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Final touches" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final touches" />
+    <MESSAGE value="Final fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final fixes" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

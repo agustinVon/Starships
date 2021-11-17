@@ -4,6 +4,7 @@ import com.soywiz.klock.DateTime
 import com.soywiz.klock.milliseconds
 import com.soywiz.klock.seconds
 import edu.austral.dissis.starships.vector.Vector2
+import javafx.scene.image.Image
 import javafx.scene.image.ImageView
 import kotlinx.serialization.Serializable
 import starships.Player
@@ -13,15 +14,10 @@ import starships.factorys.Gun
 import starships.factorys.LaserGun
 
 class Starship(position: Vector2, direction: Vector2,
-               speed: Double, view: ImageView,
-               var lives: Int, val height: Double, val width: Double,val gunSpeed: Double, val id:Int): MovableItem(position, direction, speed, view) {
+               speed: Double, val image: Image,
+               var lives: Int, val height: Double, val width: Double,val gunSpeed: Double, val id:Int): MovableItem(position, direction, speed) {
     var hasFired = false
-    val starShipDamageCollider = StarShipCollider(height-25.0, width-25.0, Math.toDegrees(direction.angle) - 90, this)
     private val defaultGun = LaserGun(10.0, 500)
-    init{
-        starShipDamageCollider.shape.layoutX = position.x + 25.0
-        starShipDamageCollider.shape.layoutY = position.y + 25.0
-    }
 
     var specialGun:Gun = FastGun(10.0)
     var specialGunCoolDown = 0.seconds
@@ -33,12 +29,6 @@ class Starship(position: Vector2, direction: Vector2,
     }
     fun hasLost():Boolean{
         return lives <= 0
-    }
-    override fun move(vector: Vector2, direction: Vector2){
-        starShipDamageCollider.shape.layoutX = vector.x
-        starShipDamageCollider.shape.layoutY = vector.y
-        starShipDamageCollider.shape.rotate = Math.toDegrees(direction.angle) - 90
-        super.move(vector, direction)
     }
     fun prepareToShoot(){
         hasFired = true

@@ -202,6 +202,7 @@ class MainTimer(private val space: Space, private val players: List<Player>,
             space.deleteImagesFromDestroyedItems();
             currentFrame += 1
             checkIfPlayersAlive()
+            space.updateSpaceViews()
             if(gameHasEnded){
                 space.showEndScreen()
             }

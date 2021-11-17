@@ -3,6 +3,7 @@ package starships.serialized
 import com.soywiz.klock.milliseconds
 import edu.austral.dissis.starships.file.ImageLoader
 import edu.austral.dissis.starships.vector.Vector2
+import javafx.scene.image.Image
 import javafx.scene.image.ImageView
 import kotlinx.serialization.json.Json
 import starships.Player
@@ -65,12 +66,12 @@ class MapToSerializable {
         val asteroids = gameData.asteroids.map {
             val position = toNormalVector(it.position)
             val direction = toNormalVector(it.direction)
-            Asteroid(position, direction, it.speed, imageToView("meteorito.png", it.height, it.width), it.height, it.width)
+            Asteroid(position, direction, imageToView("meteorito.png", it.height, it.width), it.speed, it.height, it.width)
         }
         val asteroidsList = ArrayList<Asteroid>(asteroids)
         val pickUps = gameData.pickups.map{
             val position = toNormalVector(it.position)
-            PickUp(it.gun, it.cooldownMilis.milliseconds, position, imageToView(it.source, 40.0, 40.0), it.source)
+            PickUp(it.gun, it.cooldownMilis.milliseconds, position, it.source, imageToView(it.source, 40.0, 40.0))
         }
         val pickUpsList = ArrayList<PickUp>(pickUps)
         val lasers = gameData.laser.map {
@@ -87,10 +88,9 @@ class MapToSerializable {
         return GameData(players, asteroidSpawns, pickupSpawn, asteroidsList, laserList, pickUpsList)
     }
 
-    private fun imageToView(source:String, height:Double, width:Double):ImageView{
+    private fun imageToView(source:String, height:Double, width:Double): Image {
         val imageLoader = ImageLoader()
-        val loaded = imageLoader.loadFromResources(source, width, height)
-        return ImageView(loaded)
+        return imageLoader.loadFromResources(source, width, height)
     }
 
     private fun toNormalVector(vector:SerializedVector):Vector2{

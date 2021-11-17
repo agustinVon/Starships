@@ -18,6 +18,7 @@ import starships.spaceItems.Asteroid
 import starships.spaceItems.Laser
 import starships.spaceItems.PickUp
 import starships.spaceItems.Starship
+import starships.viewManagers.*
 import java.awt.Button
 import javax.swing.GroupLayout
 
@@ -26,25 +27,37 @@ class Space(val starships: ArrayList<Starship>, private val asteroidSpawns: List
             private val asteroids: ArrayList<Asteroid>, val pane: Pane) {
     private val collisionEngine = CollisionEngine()
     private val scoreBoard = ScoreBoard()
+    private val starshipViews = ArrayList<StarShipViewManager>()
+    private val laserViews = ArrayList<LaserViewManager>()
+    private val asteroidViews = ArrayList<AsteroidViewManager>()
+    private val pickUpViews = ArrayList<PickUpViewManager>()
     init {
         pane.children.add(scoreBoard.vBox)
         starships.map {
-            pane.children.add(it.view)
+            val manager = StarShipViewManager(it, it.image, it.height-20.0, it.width-30.0, Math.toDegrees(it.direction.angle) - 90)
+            starshipViews.add(manager)
+            pane.children.add(manager.view)
         }
         lasers.map {
-            pane.children.add(it.view)
+            val manager = LaserViewManager(it, it.image, it.height, it.width, Math.toDegrees(it.direction.angle) - 90)
+            laserViews.add(manager)
+            pane.children.add(manager.view)
         }
         asteroids.map{
-            pane.children.add(it.view)
+            val manager = AsteroidViewManager(it, it.image, it.height, it.width, Math.toDegrees(it.direction.angle) - 90)
+            asteroidViews.add(manager)
+            pane.children.add(manager.view)
         }
         pickUps.map {
-            pane.children.add(it.imageView)
+            val manager = PickUpViewManager(it, it.image,20.0, 20.0, 0.0)
+            pickUpViews.add(manager)
+            pane.children.add(manager.view)
         }
     }
 
     fun removeStarship(starship: Starship){
         starships.remove(starship)
-        pane.children.remove(starship.view)
+        starshipViews.remove(starshipViews.find { it.starship == starship })
     }
 
     fun deleteImagesFromDestroyedItems(){
@@ -54,19 +67,22 @@ class Space(val starships: ArrayList<Starship>, private val asteroidSpawns: List
         val pickUpsToRemove = ArrayList<PickUp>()
         pickUps.map {
             if(it.destroyed){
-                views.add(it.imageView)
+                val pickUpView = pickUpViews.find { manager -> manager.pickUp == it }
+                views.add(pickUpView!!.view)
                 pickUpsToRemove.add(it)
             }
         }
         asteroids.map {
             if(it.destroyed){
-                views.add(it.view)
+                val asteroidViews = asteroidViews.find { manager -> manager.asteroid == it }
+                views.add(asteroidViews!!.view)
                 asteroidsToRemove.add(it)
             }
         }
         lasers.map {
             if(it.destroyed){
-                views.add(it.view)
+                val laserViews = laserViews.find { manager -> manager.laser == it }
+                views.add(laserViews!!.view)
                 lasersToRemove.add(it)
             }
         }
@@ -91,21 +107,23 @@ class Space(val starships: ArrayList<Starship>, private val asteroidSpawns: List
     fun createAsteroid(){
         val asteroid = asteroidSpawns.random().spawnAsteroid()
         asteroids.add(asteroid)
-        pane.children.add(asteroid.view)
+        val viewManager = AsteroidViewManager(asteroid, asteroid.image, asteroid.height, asteroid.width, Math.toDegrees(asteroid.direction.angle) - 90)
+        asteroidViews.add(viewManager)
+        pane.children.add(viewManager.view)
     }
 
     fun checkCollisions() {
         val colliders = ArrayList<SpaceCollider>()
-        val asteroidColliders = asteroids.map {
-            it.asteroidCollider
+        val asteroidColliders = asteroidViews.map {
+            it.collider
         }
-        val starshipColliders = starships.map {
-            it.starShipDamageCollider
+        val starshipColliders = starshipViews.map {
+            it.collider
         }
-        val laserColliders = lasers.map{
-            it.laserCollider
+        val laserColliders = laserViews.map{
+            it.collider
         }
-        val pickupCollider = pickUps.map {
+        val pickupCollider = pickUpViews.map {
             it.collider
         }
         colliders.addAll(asteroidColliders)
@@ -140,7 +158,9 @@ class Space(val starships: ArrayList<Starship>, private val asteroidSpawns: List
         }
         lasersToShoot.map{
             lasers.add(it)
-            pane.children.add(it.view)
+            val managerView = LaserViewManager(it, it.image, it.height, it.width, Math.toDegrees(it.direction.angle) - 90)
+            laserViews.add(managerView)
+            pane.children.add(managerView.view)
         }
     }
 
@@ -148,7 +168,24 @@ class Space(val starships: ArrayList<Starship>, private val asteroidSpawns: List
         if(pickUps.size <2){
             val pickUp = pickUpSpawn.spawnPickUp()
             pickUps.add(pickUp)
-            pane.children.add(pickUp.imageView)
+            val managerView = PickUpViewManager(pickUp, pickUp.image, 20.0,20.0,0.0)
+            pickUpViews.add(managerView)
+            pane.children.add(managerView.view)
+        }
+    }
+
+    fun updateSpaceViews(){
+        laserViews.map {
+            it.calculateView()
+        }
+        starshipViews.map{
+            it.calculateView()
+        }
+        pickUpViews.map {
+            it.calculateView()
+        }
+        asteroidViews.map {
+            it.calculateView()
         }
     }
 

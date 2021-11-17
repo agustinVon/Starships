@@ -20,6 +20,6 @@ class PickUpSpawn(val height: Double, val width: Double, val position: Vector2) 
         val x = Random.nextDouble(position.x, width + position.x)
         val y = Random.nextDouble(position.y, height + position.y)
         val image = imageLoader.loadFromResources(possiblePickups[gun]!!, 40.0, 40.0)
-        return PickUp(gun, 5.seconds, Vector2.vector(x, y), ImageView(image), possiblePickups[gun]!!)
+        return PickUp(gun, 5.seconds, Vector2.vector(x, y), possiblePickups[gun]!!, image)
     }
 }

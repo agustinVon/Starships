@@ -31,7 +31,7 @@ class LaserGun(private val speed: Double, private val cooldown: Int): Gun() {
             val starshipCenter = starship.position.add(Vector2.vector(21.0, 21.0))
             val laserPosition = starshipCenter.subtract(starship.direction.multiply(40.0)) //TODO add width field to spaceship
             lastShotTime = currentShot
-            val laser = Laser(laserPosition, starship.direction.multiply(-1.0), speed, ImageView(laserImage), 10.0, 5.0, starship::addScore, starship.id)
+            val laser = Laser(laserPosition, starship.direction.multiply(-1.0), speed, laserImage, 10.0, 5.0, starship::addScore, starship.id)
             val list = ArrayList<Laser>()
             list.add(laser)
             return list
